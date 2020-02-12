@@ -1,0 +1,26 @@
+[33marray-bracket-spacing does not yet have an ESLint equivalent.[39m
+[33mblock-spacing does not yet have an ESLint equivalent.[39m
+[33mbrace-style does not yet have an ESLint equivalent.[39m
+[33mfunction-name does not yet have an ESLint equivalent.[39m
+[33mimport-spacing does not yet have an ESLint equivalent.[39m
+[33mjsdoc-format does not yet have an ESLint equivalent.[39m
+[33mjsx-alignment does not yet have an ESLint equivalent.[39m
+[33mjsx-equals-spacing does not yet have an ESLint equivalent.[39m
+[33mjsx-key does not yet have an ESLint equivalent.[39m
+[33mjsx-no-bind does not yet have an ESLint equivalent.[39m
+[33mjsx-no-string-ref does not yet have an ESLint equivalent.[39m
+[33mjsx-self-close does not yet have an ESLint equivalent.[39m
+[33mjsx-wrap-multiline does not yet have an ESLint equivalent.[39m
+[33mno-boolean-literal-compare does not yet have an ESLint equivalent.[39m
+[33mno-else-after-return does not yet have an ESLint equivalent.[39m
+[33mno-function-constructor-with-string-args does not yet have an ESLint equivalent.[39m
+[33mno-reference-import does not yet have an ESLint equivalent.[39m
+[33mobject-curly-spacing does not yet have an ESLint equivalent.[39m
+[33mone-line does not yet have an ESLint equivalent.[39m
+[33mprefer-array-literal does not yet have an ESLint equivalent.[39m
+[33mspace-in-parens does not yet have an ESLint equivalent.[39m
+[33mter-computed-property-spacing does not yet have an ESLint equivalent.[39m
+[33mter-func-call-spacing does not yet have an ESLint equivalent.[39m
+[33mter-prefer-arrow-callback does not yet have an ESLint equivalent.[39m
+[33mwhitespace does not yet have an ESLint equivalent.[39m
+[33m[39m

@@ -1,38 +1,91 @@
-.App {
+body {
+  background-color: #fff3f7;
+}
+
+.header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-container {
   display: flex;
-  flex-direction: column;
+  max-width: 70%;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border: #ffffff solid 0.5px;
+  border-radius: 5px;
+  background-color: #e91e63;
+}
+
+.task-checker {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-checkbox {
+  background-color: rebeccapurple;
+  zoom: 1.5;
+}
+
+.task-details {
+  width: 80%;
+}
+
+.task-description {
+  font-size: 15px;
+  margin: 12px 0;
+  color: #ffffff;
+}
+
+.task-description-input {
+  width: 100%;
+  font-size: 15px;
+  margin: 12px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #e91d63;
+}
+
+.task-remover {
+  display: flex;
+  width: 10%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  float: right;
 }
 
-.App-link {
-  color: #61dafb;
+.task-remove-icon {
+  width: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-add-button {
+  padding: 4px 7px;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 700;
+  border: #ffffff solid 0.5px;
+}
+
+.strike-text {
+  text-decoration: line-through;
+}
+
+.disabled-text {
+  color: #7b7b7b;
+}
+
+.disabled-container {
+  background-color: #d8d8d8;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.new-task-add-icon {
+  width: 20px;
 }
