@@ -8,6 +8,7 @@
     ],
     "jsRules": {},
     "rules": {
+      "no-any": true,
       "jsx-boolean-value": false,
       "jsx-curly-spacing": false,
       "jsx-no-lambda": false,
@@ -21,6 +22,7 @@
       "ter-arrow-parens": false,
       "ter-indent": false,
       "import-name": false,
+      "quotemark": [true, "single", "avoid-escape"],
       "variable-name": {
         "options": [
           "ban-keywords",

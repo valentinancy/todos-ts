@@ -5,15 +5,15 @@ import trashIcon from '../assets/trash.png';
 import plusIcon from '../assets/plus.png'
 
 interface ITaskComponentProps extends ITask {
-    addTaskToDirectory: (task: ITask) => void;
+    addTaskToDirectory: (task: any) => void;
     deleteTaskFromDirectory: (id: string) => void;
     id: string;
     isNewTask: boolean;
-    toggleChecked: (id: string) => void;
+    checkATask: (id: string) => void;
 }
 
 const Task: FunctionComponent<ITaskComponentProps> = (props) => {
-    const { addTaskToDirectory, description, deleteTaskFromDirectory, id, isChecked, isNewTask, toggleChecked } = props;
+    const { addTaskToDirectory, description, deleteTaskFromDirectory, id, isChecked, isNewTask, checkATask } = props;
     const [isAddingTask, setIsAddingTask] = useState(false);
     const [newTaskInput, setNewTaskInput] = useState('');
 
@@ -42,7 +42,7 @@ const Task: FunctionComponent<ITaskComponentProps> = (props) => {
     }
 
     const handleToggleChecked = (e: any, id: string) => {
-        toggleChecked(id)
+        checkATask(id)
     }
 
     return <>

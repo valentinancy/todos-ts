@@ -1,7 +1,6 @@
 module.exports = {
     "env": {
-        "browser": true,
-        "es6": true
+        "browser": true
     },
     "extends": [
         "plugin:@typescript-eslint/recommended",
@@ -18,6 +17,16 @@ module.exports = {
         "@typescript-eslint/tslint"
     ],
     "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+              "trailingComma": "none",
+              "tabWidth": 2,
+              "semi": true,
+              "singleQuote": true,
+              "arrowParens": "always"
+            }
+          ],
         "array-callback-return": [
             "warn"
         ],
@@ -530,7 +539,7 @@ module.exports = {
             }
         ],
         "@typescript-eslint/member-ordering": "error",
-        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-param-reassign": "error",
         "@typescript-eslint/no-parameter-properties": "off",
         "@typescript-eslint/no-use-before-define": "off",

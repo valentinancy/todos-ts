@@ -7,22 +7,22 @@ interface IMainProps {
 }
 
 // TODO: nanti dihapus
-const exampleDirectoryTasks: IDirectoryTasks = {
-    2: {
-        description: 'coba namanya jgn sama biar gamau nangis',
-        isChecked: true,
-    },
-    1: {
-        description: 'ini adalah sebuah task',
-        isChecked: false,
-    },
-    3: {
-        description: 'task checked lagi ni',
-        isChecked: true,
-    },
-} 
+// const exampleDirectoryTasks: IDirectoryTasks = {
+//     2: {
+//         description: 'coba namanya jgn sama biar gamau nangis',
+//         isChecked: true,
+//     },
+//     1: {
+//         description: 'ini adalah sebuah task',
+//         isChecked: false,
+//     },
+//     3: {
+//         description: 'task checked lagi ni',
+//         isChecked: true,
+//     },
+// } 
 
-const Main: FunctionComponent<IMainProps> = ({ initialDirectoryTasks = exampleDirectoryTasks }) => {
+const Main: FunctionComponent<IMainProps> = ({ initialDirectoryTasks = {} }) => {
     const [directoryTasks, setDirectoryTasks] = useState(initialDirectoryTasks);
     const [latestId, setLatestId] = useState(2);
     
@@ -39,7 +39,7 @@ const Main: FunctionComponent<IMainProps> = ({ initialDirectoryTasks = exampleDi
         setDirectoryTasks(newDirectoryTasks as IDirectoryTasks);
     }
 
-    const toggleChecked = (id: string) => {
+    const checkATask = (id: string) => {
         const newDirectoryTasks = { ...directoryTasks };
         newDirectoryTasks[id].isChecked = !newDirectoryTasks[id].isChecked;
         setDirectoryTasks(newDirectoryTasks)
@@ -60,13 +60,13 @@ const Main: FunctionComponent<IMainProps> = ({ initialDirectoryTasks = exampleDi
         <h2 className="header">Todos</h2>
         {Object.keys(uncheckTasks).map((id: string) => {
             const { description, isChecked } = uncheckTasks[id];
-            return (<Task key={id} id={id} description={description} isChecked={isChecked} isNewTask={false} toggleChecked={toggleChecked} addTaskToDirectory={addTaskToDirectory} deleteTaskFromDirectory={deleteTaskFromDirectory} />)
+            return (<Task key={id} id={id} description={description} isChecked={isChecked} isNewTask={false} checkATask={checkATask} addTaskToDirectory={addTaskToDirectory} deleteTaskFromDirectory={deleteTaskFromDirectory} />)
         })}
         {Object.keys(checkedTasks).map((id: string) => {
             const { description, isChecked } = checkedTasks[id];
-            return (<Task key={id} id={id} description={description} isChecked={isChecked} isNewTask={false} toggleChecked={toggleChecked} addTaskToDirectory={addTaskToDirectory} deleteTaskFromDirectory={deleteTaskFromDirectory} />)
+            return (<Task key={id} id={id} description={description} isChecked={isChecked} isNewTask={false} checkATask={checkATask} addTaskToDirectory={addTaskToDirectory} deleteTaskFromDirectory={deleteTaskFromDirectory} />)
         })}
-        <Task isNewTask={true} id='0' isChecked={false} description="Add New Task" toggleChecked={toggleChecked} addTaskToDirectory={addTaskToDirectory} deleteTaskFromDirectory={deleteTaskFromDirectory} />
+        <Task isNewTask={true} id='0' isChecked={false} description="Add New Task" checkATask={checkATask} addTaskToDirectory={addTaskToDirectory} deleteTaskFromDirectory={deleteTaskFromDirectory} />
     </>
 }
 
