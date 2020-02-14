@@ -289,13 +289,7 @@ module.exports = {
         ],
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
-        "no-unused-vars": [
-            "warn",
-            {
-                "args": "none",
-                "ignoreRestSiblings": true
-            }
-        ],
+        "no-unused-vars": "error",
         "no-use-before-define": [
             "warn",
             {
