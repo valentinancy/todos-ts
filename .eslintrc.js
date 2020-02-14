@@ -14,19 +14,12 @@ module.exports = {
     },
     "plugins": [
         "@typescript-eslint",
-        "@typescript-eslint/tslint"
+        "@typescript-eslint/tslint",
+        "jsx-a11y",
+        "react-hooks",
+        "react",
     ],
     "rules": {
-        "prettier/prettier": [
-            "error",
-            {
-              "trailingComma": "none",
-              "tabWidth": 2,
-              "semi": true,
-              "singleQuote": true,
-              "arrowParens": "always"
-            }
-          ],
         "array-callback-return": [
             "warn"
         ],
@@ -95,9 +88,6 @@ module.exports = {
             "warn"
         ],
         "no-implied-eval": [
-            "warn"
-        ],
-        "no-invalid-regexp": [
             "warn"
         ],
         "no-iterator": [
@@ -360,15 +350,6 @@ module.exports = {
         "getter-return": [
             "warn"
         ],
-        "import/first": [
-            "error"
-        ],
-        "import/no-amd": [
-            "error"
-        ],
-        "import/no-webpack-loader-syntax": [
-            "error"
-        ],
         "react/forbid-foreign-prop-types": [
             "warn",
             {
@@ -487,15 +468,6 @@ module.exports = {
         "react-hooks/rules-of-hooks": [
             "error"
         ],
-        "flowtype/define-flow-type": [
-            "warn"
-        ],
-        "flowtype/require-valid-file-annotation": [
-            "warn"
-        ],
-        "flowtype/use-flow-type": [
-            "warn"
-        ],
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -505,7 +477,7 @@ module.exports = {
             }
         ],
         "@typescript-eslint/indent": [
-            "error",
+            "off",
             4,
             {
                 "CallExpression": {
@@ -534,7 +506,6 @@ module.exports = {
         ],
         "@typescript-eslint/member-ordering": "error",
         "@typescript-eslint/no-explicit-any": "error",
-        "@typescript-eslint/no-param-reassign": "error",
         "@typescript-eslint/no-parameter-properties": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/prefer-for-of": "error",
@@ -595,7 +566,7 @@ module.exports = {
             }
         ],
         "no-bitwise": "error",
-        "no-console": "error",
+        "no-console": "warn",
         "no-debugger": "error",
         "no-duplicate-imports": "error",
         "no-empty": "error",
@@ -616,7 +587,6 @@ module.exports = {
             "error",
             "never"
         ],
-        "prefer-arrow/prefer-arrow-functions": "error",
         "prefer-template": "error",
         "quote-props": [
             "error",
@@ -632,7 +602,7 @@ module.exports = {
         ],
         "spaced-comment": "error",
         "@typescript-eslint/tslint/config": [
-            "error",
+            "off",
             {
                 "rules": {
                     "array-bracket-spacing": [

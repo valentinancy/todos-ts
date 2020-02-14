@@ -13,7 +13,8 @@
       "jest": true
     },
     "rules": {
-      "prettier/prettier": ["error", { "singleQuote": true }]
+      "prettier/prettier": ["error", { "singleQuote": false }],
+      "@typescript-eslint/interface-name-prefix": 2
     },
     "settings": {
       "react": {

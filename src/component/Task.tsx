@@ -21,31 +21,30 @@ const Task: FunctionComponent<ITaskComponentProps> = (props) => {
         const taskDescriptionElement = document.getElementById('task-description-new');
         if(taskDescriptionElement) {
             if(isAddingTask) {
-                taskDescriptionElement.style.display = "none"
+                taskDescriptionElement.style.display = 'none'
             } else {
-                taskDescriptionElement.style.display = "block"
+                taskDescriptionElement.style.display = 'block'
             }
         }
     }
     const task: ITask = {
         description: newTaskInput,
-        isChecked: false
+        isChecked: false,
     }
-    const handleAddTask = () => {
+    const handleAddTask: (() => void) = () => {
         addTaskToDirectory(task);
         setNewTaskInput('');
         setIsAddingTask(false);
     }
-    
-    const handleDeleteTask = () => {
+    const handleDeleteTask: (() => void) = () => {
         deleteTaskFromDirectory(id);
     }
 
-    const handleToggleChecked = () => {
+    const handleToggleChecked: (() => void) = () => {
         checkATask(id)
     }
 
-    const renderButton = (isOnLeft: boolean) => {
+    const renderButton: ((isOnLeft: boolean) => void) = (isOnLeft: boolean) => {
         let actionButtonComponent;
         if(isNewTask) {
             if(isOnLeft) {
