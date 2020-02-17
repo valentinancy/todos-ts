@@ -20,6 +20,13 @@ module.exports = {
         "react",
     ],
     "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/interface-name-prefix": [
+            "error",
+            {
+                "prefixWithI": "always"
+            }
+        ],
         "array-callback-return": [
             "warn"
         ],
@@ -470,12 +477,6 @@ module.exports = {
         ],
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
-        "@typescript-eslint/explicit-member-accessibility": [
-            "error",
-            {
-                "accessibility": "explicit"
-            }
-        ],
         "@typescript-eslint/indent": [
             "off",
             4,
@@ -512,7 +513,7 @@ module.exports = {
         "@typescript-eslint/prefer-function-type": "error",
         "@typescript-eslint/quotes": [
             "error",
-            "single",
+            "double",
             {
                 "avoidEscape": true
             }
@@ -600,7 +601,7 @@ module.exports = {
                 "named": "never"
             }
         ],
-        "spaced-comment": "error",
+        "spaced-comment": "warn",
         "@typescript-eslint/tslint/config": [
             "off",
             {
